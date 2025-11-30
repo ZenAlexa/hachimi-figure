@@ -1,0 +1,97 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/zimingwang/Documents/GitHub/nanobananapro-1"
+      ],
+      "alwaysAllow": [
+        "read_file",
+        "list_directory",
+        "get_file_info"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "alwaysAllow": [
+        "list_repositories",
+        "get_file_contents",
+        "create_or_update_file",
+        "search_repositories",
+        "create_issue",
+        "create_pull_request",
+        "list_commits"
+      ]
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "${DATABASE_URL}"
+      ],
+      "alwaysAllow": [
+        "query",
+        "list_tables",
+        "describe_table"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "alwaysAllow": [
+        "create_thoughts",
+        "analyze_problem",
+        "evaluate_solution"
+      ]
+    },
+    "web-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY:-}"
+      },
+      "alwaysAllow": [
+        "brave_web_search"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "alwaysAllow": [
+        "create_entities",
+        "create_relations",
+        "search_nodes",
+        "open_nodes"
+      ]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "alwaysAllow": [
+        "fetch"
+      ]
+    }
+  }
+}

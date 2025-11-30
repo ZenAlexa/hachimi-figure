@@ -1,0 +1,95 @@
+{
+  "projectName": "Nexty",
+  "description": "Modern Full-Stack SaaS Boilerplate with Next.js 15, React 19, TypeScript, Stripe, Better Auth, and AI Integration",
+  "version": "3.2.4",
+  "language": "typescript",
+  "framework": "nextjs",
+  "packageManager": "pnpm",
+  "features": {
+    "enablePlanning": true,
+    "enableBuilding": true,
+    "enableDeployment": true,
+    "enableHotReload": true,
+    "autoSave": true,
+    "formatOnSave": true,
+    "lintOnSave": true
+  },
+  "modelPreferences": {
+    "default": "claude-sonnet-4",
+    "complex": "claude-opus-4",
+    "simple": "claude-haiku-4"
+  },
+  "contextWindow": 200000,
+  "autoSaveThreshold": 500,
+  "codeStyle": {
+    "indentation": "spaces",
+    "tabSize": 2,
+    "quotes": "single",
+    "semicolons": false,
+    "trailingComma": "es5",
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "ignorePatterns": [
+    "node_modules/**",
+    ".git/**",
+    ".next/**",
+    "dist/**",
+    "build/**",
+    "out/**",
+    "coverage/**",
+    ".turbo/**",
+    ".vercel/**",
+    "*.log",
+    ".env.local",
+    ".env.*.local",
+    "*.min.js",
+    "*.map",
+    "public/build/**"
+  ],
+  "fileAssociations": {
+    "*.md": "markdown",
+    "*.mdx": "mdx",
+    "*.tsx": "typescriptreact",
+    "*.ts": "typescript",
+    "*.mjs": "javascript"
+  },
+  "paths": {
+    "root": "/Users/zimingwang/Documents/GitHub/nanobananapro-1",
+    "src": "app",
+    "components": "components",
+    "lib": "lib",
+    "types": "types",
+    "actions": "actions",
+    "config": "config",
+    "public": "public",
+    "styles": "styles"
+  },
+  "testing": {
+    "framework": null,
+    "testPattern": "**/*.{test,spec}.{js,jsx,ts,tsx}",
+    "coverage": false
+  },
+  "deployment": {
+    "platform": "vercel",
+    "autoDeployBranches": ["main", "production"],
+    "previewBranches": ["develop", "staging"]
+  },
+  "integrations": {
+    "stripe": true,
+    "betterAuth": true,
+    "drizzle": true,
+    "resend": true,
+    "cloudflareR2": true,
+    "upstash": true,
+    "vercelAI": true,
+    "nextIntl": true,
+    "shadcnUI": true,
+    "tailwindCSS": true
+  },
+  "analytics": {
+    "vercel": true,
+    "google": true,
+    "plausible": true
+  }
+}
